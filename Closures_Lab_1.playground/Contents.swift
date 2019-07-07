@@ -105,34 +105,34 @@ import UIKit
 //})
 //print("Sorted by alphabetical order of the last character in the city name:",reverseAlphabeticalOrderOfTheLastChar, separator: "\n",terminator: "\n\n")
 
-/* 7. Sort `numbers` in ascending order by the number of divisors. If two numbers have the same number of divisors the order in which they appear in the sorted array does not matter.
-
- `var numbers = [1, 2, 3, 4, 5, 6]`
- */
-var numbers = [1, 2, 3, 4, 5, 6,7]
-
-let sortByNumberOfDivisors = { (arr: [Int] ) -> [Int] in
-    var outputArray = [Int]()
-    var divisorCountTuple = [(number: Int , count: Int)]()
-    
-    for number in arr {
-        var numberOfDivisors = 0
-        for x in 1...number where number % x == 0{
-            numberOfDivisors += 1
-        }
-        divisorCountTuple.append((number: number, count: numberOfDivisors))
-    }
-    divisorCountTuple.sort(by: {(x,y) in
-        x.count < y.count
-    })
-    
-    for (number, _) in divisorCountTuple {
-        outputArray.append(number)
-    }
-    return outputArray
-}
-
-print(sortByNumberOfDivisors(numbers))
+///* 7. Sort `numbers` in ascending order by the number of divisors. If two numbers have the same number of divisors the order in which they appear in the sorted array does not matter.
+//
+// `var numbers = [1, 2, 3, 4, 5, 6]`
+// */
+//var numbers = [1, 2, 3, 4, 5, 6,7]
+//
+//let sortByNumberOfDivisors = { (arr: [Int] ) -> [Int] in
+//    var outputArray = [Int]()
+//    var divisorCountTuple = [(number: Int , count: Int)]()
+//    
+//    for number in arr {
+//        var numberOfDivisors = 0
+//        for x in 1...number where number % x == 0{
+//            numberOfDivisors += 1
+//        }
+//        divisorCountTuple.append((number: number, count: numberOfDivisors))
+//    }
+//    divisorCountTuple.sort(by: {(x,y) in
+//        x.count < y.count
+//    })
+//    
+//    for (number, _) in divisorCountTuple {
+//        outputArray.append(number)
+//    }
+//    return outputArray
+//}
+//
+//print(sortByNumberOfDivisors(numbers))
 
 ///* 8. Find the sum of the squares of all the odd numbers from `numbers` and then print it.
 //
